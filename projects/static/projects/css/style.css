@@ -1,0 +1,25 @@
+nav#breadcrumbs{
+    margin-top: 5px;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.breadcrumb{
+    color: black;
+}
+.breadcrumb:before{
+    color: black;
+}
+.breadcrumb:last-child{
+    color: #EE6E73;
+}
+
+.carousel{
+    height: 350px;
+    perspective: 400px;
+    transform: translate(-55px, -45px);
+
+}
+.carousel .carousel-item {
+    width:300px !important;
+}

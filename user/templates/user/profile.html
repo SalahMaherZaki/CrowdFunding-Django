@@ -1,0 +1,71 @@
+
+{% extends 'user/base.html'%}
+{%block title%}profile{%endblock%}
+{% load static%}
+{% block body%}
+<div class="container">
+    <div class="section">
+       <div class="card-panel grey lighten-5 z-depth-1">
+           <div class="row valign-wrapper">
+               <div class="col s3">
+                   <img class="circle responsive-img" style="height: 10rem;" src="{{ user.profile.user_picture.url }}">
+               </div>
+               <div class="col s10">
+                   <h3 class="account-heading">{{ user.username }}</h3>
+                   <p class="text-secondary">{{ user.email }}</p>
+               </div>
+           </div>
+        </div>
+    </div>
+    <!-- user Data HERE -->
+    <table>
+            <th>First Name</th>
+            <td>{{user.first_name}}</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>{{user.last_name}}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{user.email}}</td>
+        </tr>
+        <tr>
+            <th>Phone Numbers</th>
+            <td>{{phone.phone}}</td>
+        </tr>
+        <!--<tr>-->
+            <!--<th><h5 class="text light grey lighten-4">&#45;&#45;More Data&#45;&#45;</h5></th>-->
+        <!--</tr>-->
+
+        <tr>
+            <th>Birth Date</th>
+            <td>{{user.profile.birth_date}}</td>
+        </tr>
+        <tr>
+            <th>Country</th>
+            <td>{{user.profile.country}}</td>
+        </tr>
+        <tr>
+            <th>Facebook profile</th>
+            <td>{{user.profile.facebook_url}}</td>
+        </tr>
+        <tr>
+            <th>last login at </th>
+            <td>{{user.last_login}}</td>
+        </tr>
+        <tr>
+            <th>You Joind us at</th>
+            <td>{{user.date_joined}}</td>
+        </tr>
+
+    </table>
+    <br/>
+
+    <br/>
+
+</div>
+
+
+{%endblock%}
+

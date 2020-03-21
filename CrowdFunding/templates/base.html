@@ -1,0 +1,57 @@
+{% load static %}
+<!--<!DOCTYPE html>-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mainStyle.css' %}">
+
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav>
+        <div class="container nav-wrapper" style="width: 80%;">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li {% if activate == 'home' %}class="active" {% endif %}>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li {% if activate == 'projects' %}class="active" {% endif %}>
+                    <a href="{% url 'projects' %}">Projects</a>
+                </li>
+                <li {% if activate == 'profile' %}class="active" {% endif %}>
+                    <a href="{% url 'profile' %}">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'profile' %}">Profile</a></li>
+    </ul>
+    <!-- END NAV BAR -->
+
+    <div class="container">
+        {% block body %}
+        <h1>hello</h1>
+        {% endblock %}
+    </div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/materialize.min.js'%}"></script>
+    <script>
+        M.AutoInit();
+    </script>
+</body>
+
+</html>

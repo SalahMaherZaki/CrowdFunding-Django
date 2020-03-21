@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} All Projects {% endblock %}
+
+{% block body %}
+    {% comment %} <h1> hello from body </h1> {% endcomment %}
+   
+    
+    <div class="col s12 m6">
+        <h1> {{ project.project_title }} </h1>
+        <span class="card-title"></span>
+        <div class="card">
+            <div>
+               
+            </div>
+            
+          
+                </div>
+                <div >
+                  
+                    <h3>Why you Report This</h3>
+                    <form method="POST" >
+                      {% csrf_token %}
+                      {{ report_form.as_p }}
+                      
+                      <button type="submit" value="Sumbit"> <a href="/projects/{{Projects.id}}">Report </a></button>
+                    </form>
+              
+                  </div>
+           
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %} All Projects {% endblock %}
+
+{% block body %}
+    {% comment %} <h1> hello from body </h1> {% endcomment %}
+   
+    
+    <div class="col s12 m6">
+        <h1> {{ project.project_title }} </h1>
+        <span class="card-title"></span>
+        <div class="card">
+            <div>
+                <p style = "font-size:20px">
+                    The Project Description is:</p><p> {{ project.project_details | truncatewords:20 }}
+                 </p>
+            </div>
+            <div class="card-image">
+                <img src="{{ project.images_set.all.0.img.url}}">
+                
+              
+            </div>
+            <div >
+                
+                <p>
+                <h5>All Comments :</h5>
+                 </p>
+               
+                    <!-- comments -->
+                 
+              
+                    {% for Comment in comments %}
+                    <div >
+                      {{ Comment.comment_content  }}
+                    <span><a href="/projects/report/">Report </a></span> 
+                    </div></br>
+              
+                    {% endfor %}
+                  </div>
+                </div>
+                <div >
+                  
+                    <h3>Leave a comment</h3>
+                    <form method="POST" >
+                        {{ comment_form.as_p }}
+                      {% csrf_token %}
+                      
+                      
+                      <button type="submit" value="Sumbit">Send</button>
+                      <a href="/projects/report/">REPORT THE PROJECT</a>
+                    </form>
+              
+                  </div>
+           
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
