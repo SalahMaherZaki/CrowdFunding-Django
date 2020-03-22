@@ -19,8 +19,8 @@
         <div class="section">
             <div class="card-panel hoverable" >
                 <div style="text-align:right">
-                    <a  href=""><button class="btn btn-outline-info">Edit</button></a>
-                    <a href=""><button class="btn grey lighten-1">Delete</button></a>
+                    <a  href="/profile/edit_project/{{ item.id }}"><button class="btn btn-outline-info">Edit</button></a>
+                    <a href="/profile/delete_project/{{ item.id }}"><button class="btn grey lighten-1">Delete</button></a>
                 </div>
                  <h3 class="blue-text text-darken-1">{{ item.project_title }}</h3>
                 <h5>Donation you want: {{item.total_donation}}$</h5>
