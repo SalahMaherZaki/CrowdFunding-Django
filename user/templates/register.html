@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Registeration</title>
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container col-6 offset-3 mt-5 border-">
+        <div>
+            <p class="h3 alert alert-danger text-center">Register</p>
+        </div>
+        <div>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="text" name="firstName" class="form-control mt-2" placeholder="First Name" required>
+                <input type="text" name="lastName" class="form-control mt-2" placeholder="Last Name" required>
+                <input type="text" name="userName" class="form-control mt-2" placeholder="Username" required>
+                <input type="text" name="email" class="form-control mt-2" placeholder="Email" required>
+                <input type="password" name="password1" class="form-control mt-2" placeholder="Password" required>
+                <input type="password" name="password2" class="form-control mt-2" placeholder="Confirm Password"
+                    required>
+                <input type="text" name="phone" class="form-control mt-2" placeholder="Mobile Phone" required>
+                <label for="file" class="m-2">Upload photo</label>
+                <input type="file" name="pic">
+
+                <input type="submit" name="register" value="Register" class="mt-2 form-control btn btn-info">
+                <a href="../login" class="mt-2 form-control  btn btn-success">Login</a>
+            </form>
+            <div>
+                {% for message in messages %}
+                <h3>{{message}}</h3>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,37 +1,37 @@
 {% extends 'user/base.html' %}
 {% block title %} My Projects {% endblock %}
 {% block body %}
-    <div class="container">
+<div class="container">
     <div class="section">
-       <div class="card-panel grey lighten-5 z-depth-1">
-           <div class="row valign-wrapper">
-               <div class="col s2">
-                   <img class="circle responsive-img" style="height:150px" src="{{ user.profile.user_picture.url }}">
-               </div>
-               <div class="col s10">
-                   <h3 class="account-heading">{{ user.username }} | My Projects</h3>
-               </div>
-           </div>
-        </div>
-    </div>
-        <!-- -&#45;&#45; User Projects -&#45;&#45;-->
-        {% for item in u_project %}
-        <div class="section">
-            <div class="card-panel hoverable" >
-                <div style="text-align:right">
-                    <a  href="/profile/edit_project/{{ item.id }}"><button class="btn btn-outline-info">Edit</button></a>
-                    <a href="/profile/delete_project/{{ item.id }}"><button class="btn grey lighten-1">Delete</button></a>
+        <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                    <img class="circle responsive-img" style="height:150px" src="{{ user.profile.user_picture.url }}">
                 </div>
-                 <h3 class="blue-text text-darken-1">{{ item.project_title }}</h3>
-                <h5>Donation you want: {{item.total_donation}}$</h5>
-               <hr class="divider">
-                <h6>Start Data: {{ item.start_time|date:"F d, Y" }}</h6>
-              <h6>End Data: {{ item.end_time|date:"F d, Y" }}</h6>
-              <p class="flow-text">{{ item.project_details|truncatewords:10 }}</p>
-                <img src="{{item.images_set.all.0.img.url}}" style="width: 30rem;"/>
-           </div>
+                <div class="col s10">
+                    <h3 class="account-heading">{{ user.username }} | My Projects</h3>
+                </div>
+            </div>
         </div>
-
-        {% endfor %}
     </div>
+    <!-- -&#45;&#45; User Projects -&#45;&#45;-->
+    {% for item in u_project %}
+    <div class="section">
+        <div class="card-panel hoverable">
+            <div style="text-align:right">
+                <a href="/profile/edit_project/{{ item.id }}"><button class="btn btn-outline-info">Edit</button></a>
+                <a href="/profile/delete_project/{{ item.id }}"><button class="btn grey lighten-1">Delete</button></a>
+            </div>
+            <h3 class="blue-text text-darken-1">{{ item.project_title }}</h3>
+            <h5>Donation you want: {{item.total_donation}}$</h5>
+            <hr class="divider">
+            <h6>Start Data: {{ item.start_time|date:"F d, Y" }}</h6>
+            <h6>End Data: {{ item.end_time|date:"F d, Y" }}</h6>
+            <p class="flow-text">{{ item.project_details|truncatewords:10 }}</p>
+            <img src="{{item.images_set.all.0.img.url}}" style="width: 30rem;" />
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
 {% endblock %}

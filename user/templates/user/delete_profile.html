@@ -4,14 +4,14 @@
 {% block body%}
 <div class="container">
     <div class="section">
-       <div class="card-panel grey lighten-5 z-depth-1">
-               <form method="post" action="/profile/delete/{{ user.id }}">
-                   {% csrf_token %}
-               <h3 class="account-heading">{{ user.username }}</h3>
-               <h4>You will delete your account, Are you sure?</h4>
-               <input class="btn red darken-1" type="submit" value="Delete"/>
-                </form>
-                <a href="/profile"><button class="btn grey lighten-1">Cancel</button></a>
+        <div class="card-panel grey lighten-5 z-depth-1">
+            <form method="post" action="/profile/delete/{{ user.id }}">
+                {% csrf_token %}
+                <h3 class="account-heading">{{ user.username }}</h3>
+                <h4>You will delete your account, Are you sure?</h4>
+                <input class="btn red darken-1" type="submit" value="Delete" />
+            </form>
+            <a href="/profile"><button class="btn grey lighten-1">Cancel</button></a>
         </div>
     </div>
 </div>

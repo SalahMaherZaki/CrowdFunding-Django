@@ -1,26 +1,25 @@
-
 {% extends 'user/base.html'%}
 {%block title%}profile{%endblock%}
 {% load static%}
 {% block body%}
 <div class="container">
     <div class="section">
-       <div class="card-panel grey lighten-5 z-depth-1">
-           <div class="row valign-wrapper">
-               <div class="col s3">
-                   <img class="circle responsive-img" style="height: 10rem;" src="{{ user.profile.user_picture.url }}">
-               </div>
-               <div class="col s10">
-                   <h3 class="account-heading">{{ user.username }}</h3>
-                   <p class="text-secondary">{{ user.email }}</p>
-               </div>
-           </div>
+        <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s3">
+                    <img class="circle responsive-img" style="height: 10rem;" src="{{ user.profile.user_picture.url }}">
+                </div>
+                <div class="col s10">
+                    <h3 class="account-heading">{{ user.username }}</h3>
+                    <p class="text-secondary">{{ user.email }}</p>
+                </div>
+            </div>
         </div>
     </div>
     <!-- user Data HERE -->
     <table>
-            <th>First Name</th>
-            <td>{{user.first_name}}</td>
+        <th>First Name</th>
+        <td>{{user.first_name}}</td>
         </tr>
         <tr>
             <th>Last Name</th>
@@ -32,10 +31,10 @@
         </tr>
         <tr>
             <th>Phone Numbers</th>
-            <td>{{phone.phone}}</td>
+            <td>{{user.profile.phoneNum}}</td>
         </tr>
         <!--<tr>-->
-            <!--<th><h5 class="text light grey lighten-4">&#45;&#45;More Data&#45;&#45;</h5></th>-->
+        <!--<th><h5 class="text light grey lighten-4">&#45;&#45;More Data&#45;&#45;</h5></th>-->
         <!--</tr>-->
 
         <tr>
@@ -60,12 +59,11 @@
         </tr>
 
     </table>
-    <br/>
+    <br />
 
-    <br/>
+    <br />
 
 </div>
 
 
 {%endblock%}
-

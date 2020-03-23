@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+	'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -41,6 +42,10 @@ INSTALLED_APPS = [
     'projects',
     'user',
     'crispy_forms',
+	'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +75,20 @@ TEMPLATES = [
         },
     },
 ]
+
+SOCIALACCOUNT_PROVIDERS = {
+                'facebook':{    'SCOPE':['email'],
+                                'AUTH_PARAMS':{'auth_type':'reauthenticate'},
+                                'METHOD':'js_sdk',
+                                'LOCALE_FUNC' : lambda request: 'en-US'
+
+                                },
+                'google':{    'SCOPE':['email'],
+                                'AUTH_PARAMS':{'auth_type':'reauthenticate'},
+                                'METHOD':'js_sdk',
+                                'LOCALE_FUNC' : lambda request: 'en-US'
+                                }
+                        }
 
 WSGI_APPLICATION = 'CrowdFunding.wsgi.application'
 
@@ -130,3 +149,12 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+)
+
+SITE_ID=1
+# LOGIN_URL = '/'
+LOGIN_REDIRECT_URL= "/"
