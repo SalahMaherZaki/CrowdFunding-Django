@@ -14,36 +14,34 @@
         </div>
     </div>
 </nav>
-    {% comment %} <h1> hello from body </h1> {% endcomment %}
-    <div class="row">
+{% comment %} <h1> hello from body </h1> {% endcomment %}
+<div class="row">
     {% for project in projects %}
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{ project.images_set.all.0.img.url}}">
-                    <span class="card-title">{{ project.project_title }}</span>
-                    <a 
-                    href="{{project.id}}"
-                    class="btn-floating halfway-fab waves-effect waves-light red">
-                        <i class="material-icons">add</i>
-                    </a>
-                </div>
-                <div class="card-content">
-                    <p>
-                        {{ project.project_details | truncatewords:20 }}
-                    </p>
-                </div>
-                {% comment %} {% for book in author.book_set.all %} {% endcomment %}
-
-                {% if project.tag %}
-                    <div class="card-action black">
-                        {% for t in project.tag.all %}
-                            <a href="tag/{{t.tag_name}}">{{ t.tag_name }}</a>
-                        {% endfor %}
-                    </div>
-                {% endif %}
+    <div class="col s12 m6">
+        <div class="card">
+            <div class="card-image">
+                <img src="{{ project.images_set.all.0.img.url}}">
+                <span class="card-title">{{ project.project_title }}</span>
+                <a href="{{project.id}}" class="btn-floating halfway-fab waves-effect waves-light red">
+                    <i class="material-icons">add</i>
+                </a>
             </div>
+            <div class="card-content">
+                <p>
+                    {{ project.project_details | truncatewords:20 }}
+                </p>
+            </div>
+            {% comment %} {% for book in author.book_set.all %} {% endcomment %}
+
+            {% if project.tag %}
+            <div class="card-action black">
+                {% for t in project.tag.all %}
+                <a href="tag/{{t.tag_name}}">{{ t.tag_name }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
         </div>
-    {% endfor %}
     </div>
+    {% endfor %}
+</div>
 {% endblock %}

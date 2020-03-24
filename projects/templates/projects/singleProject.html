@@ -1,59 +1,127 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %} All Projects {% endblock %}
 
 {% block body %}
-    {% comment %} <h1> hello from body </h1> {% endcomment %}
-   
-    
-    <div class="col s12 m6">
-        <h1> {{ project.project_title }} </h1>
-        <span class="card-title"></span>
-        <div class="card">
-            <div>
-                <p style = "font-size:20px">
-                    The Project Description is:</p><p> {{ project.project_details | truncatewords:20 }}
-                 </p>
-            </div>
-            <div class="card-image">
-                <img src="{{ project.images_set.all.0.img.url}}">
-                
-              
-            </div>
-            <div >
-                
-                <p>
-                <h5>All Comments :</h5>
-                 </p>
-               
-                    <!-- comments -->
-                 
-              
-                    {% for Comment in comments %}
-                    <div >
-                      {{ Comment.comment_content  }}
-                    <span><a href="/projects/report/">Report </a></span> 
-                    </div></br>
-              
-                    {% endfor %}
-                  </div>
-                </div>
-                <div >
-                  
-                    <h3>Leave a comment</h3>
-                    <form method="POST" >
-                        {{ comment_form.as_p }}
-                      {% csrf_token %}
-                      
-                      
-                      <button type="submit" value="Sumbit">Send</button>
-                      <a href="/projects/report/">REPORT THE PROJECT</a>
-                    </form>
-              
-                  </div>
-           
-            </div>
-            
+<script src="https://js.stripe.com/v3/"></script>
+<link rel="stylesheet" href="{% static 'projects/css/style.css' %}">
+
+
+<nav id="breadcrumbs">
+    <div class="nav-wrapper white">
+        <div class="col s12">
+            <a href="{% url 'home' %}" class="breadcrumb">Home</a>
+            <a href="{% url 'projects' %}" class="breadcrumb">Projects</a>
+            <a href="#" class="breadcrumb">#{{project.project_title}}</a>
         </div>
     </div>
+</nav>
+
+<div class="row">
+    <div class=" col s12 m3 push-m9 ">
+        <h5>similar projects</h5>
+        <ul class="collection">
+            {% for project in similar %}
+            <li class="collection-item avatar">
+                <img src="{{project.images_set.all.0.img.url}}" alt="" class="circle">
+                <span class="title">{{ project }}</span>
+                <a href="{{project.id}}" class="secondary-content">
+                    <i class="material-icons">send</i>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class=" col s12 m9 pull-m3 ">
+        <div class="carousel">
+            {% for image in project.images_set.all %}
+            <div class="carousel-item white-text">
+                {% comment %} <h2>First Panel</h2> {% endcomment %}
+                <img src="{{image.img.url}}">
+            </div>
+            {% endfor %}
+        </div>
+
+        <section id="about">
+            <h4> About The Project</h4>
+            <div class="divider"></div>
+            <blockquote>
+                {{project.project_details}}
+            </blockquote>
+        </section>
+
+        <section id="donation">
+            <h4> We Aim To Gather {{project.total_donation}}$</h4>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col s12 m10">
+                    <div class="progress">
+                        <div style="width: {{ donation_percent }}%" class="determinate tooltipped" data-position="top"
+                            data-tooltip="{{total_donation}}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m2">
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Donate!</a>
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <form action="charge" method="post" id="payment-form">
+                                {% csrf_token %}
+                                <input type="number" name="project_id" value="{{project.id}}" hidden>
+                                <p class="range-field">
+                                    <input name="amount" id="range" type="range" min="100" max="10000" />
+                                </p>
+                                
+                                <div class="form-row">
+                                    <label for="card-element">
+                                        Credit or debit card
+                                    </label>
+                                    <div id="card-element">
+                                        <!-- A Stripe Element will be inserted here. -->
+                                    </div>
+
+                                    <!-- Used to display form errors. -->
+                                    <div id="card-errors" role="alert"></div>
+                                </div>
+
+                                <button>Submit Payment</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comments">
+            <h4> Comments </h4>
+            <div class="divider"></div>
+            {% for Comment in comments %}
+            <div class="row">
+                <div class="col s10">
+                    <h5 class="left-align red accent-1">{{ Comment.comment_content  }}</h5>
+                </div>
+                <div class="col s2">
+                    <a class="waves-effect red btn-large" href="/projects/report/">Report</a>
+                </div>
+            </div>
+            {% endfor %}
+            <form method="POST">
+                {{ comment_form.as_p }}
+                {% csrf_token %}
+                <button type="submit" class="btn-large green accent-4" value="Sumbit">Send</button>
+            </form>
+                <a href="/projects/report/">REPORT THE PROJECT</a>
+
+        </section>
+    </div>
+</div>
+
+<script src="{% static 'projects/js/scripts.js' %}"></script>
+    <script>
+            M.Range.init($('#range'))
+        {% if success %}
+            M.toast({html: 'Thanks for your donation' , classes: 'rounded pink accent-2 black-text'})
+        {% endif %}
+    </script>
 {% endblock %}
