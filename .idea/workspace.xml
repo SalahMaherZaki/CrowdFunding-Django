@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0a08a69-96f8-4901-a6d4-caf0dc1bfb9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HomePage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/css/all.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/css/font-awesome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/js/JQuery-3.3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/js/JQuery-3.3.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/js/JQuery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/js/JQuery-3.3.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/static/js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/static/js/popper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomePage/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/templates/projectDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/templates/projectDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomePage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/static/projects/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/projects/static/projects/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/templates/projects/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/templates/projects/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/templates/projects/singleProject.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/templates/projects/singleProject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,20 +63,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="201" />
+          <entry key="html" value="251" />
           <entry key="py" value="655" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="201" />
+          <entry key="HTML" value="251" />
           <entry key="Python" value="655" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="9" />
-          <entry key="py" value="13" />
+          <entry key="py" value="16" />
           <entry key="sqlite3" value="1" />
         </counts>
       </usages-collector>
@@ -104,7 +84,7 @@
         <counts>
           <entry key="HTML" value="9" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="13" />
+          <entry key="Python" value="16" />
         </counts>
       </usages-collector>
     </session>
@@ -133,15 +113,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/templates/user/delete_profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="366">
@@ -157,7 +128,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1489">
+            <state relative-caret-position="2525">
               <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
@@ -165,6 +136,15 @@
                 <marker date="1585067980204" expanded="true" signature="4060:4065" ph="..." />
                 <marker date="1585067980204" expanded="true" signature="4501:4503" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -185,29 +165,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HomePage/templates/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+            <state relative-caret-position="277">
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HomePage/templates/projectDetails.html">
+        <entry file="file://$PROJECT_DIR$/HomePage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+            <state>
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,7 +219,6 @@
         <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/HomePage/views.py" />
         <option value="$PROJECT_DIR$/HomePage/models.py" />
-        <option value="$PROJECT_DIR$/projects/views.py" />
         <option value="$PROJECT_DIR$/CrowdFunding/templates/base.html" />
         <option value="$PROJECT_DIR$/userAuth/models.py" />
         <option value="$PROJECT_DIR$/userAuth/admin.py" />
@@ -257,6 +239,7 @@
         <option value="$PROJECT_DIR$/user/admin.py" />
         <option value="$PROJECT_DIR$/CrowdFunding/settings.py" />
         <option value="$PROJECT_DIR$/user/models.py" />
+        <option value="$PROJECT_DIR$/projects/views.py" />
         <option value="$PROJECT_DIR$/HomePage/templates/homepage.html" />
       </list>
     </option>
@@ -348,24 +331,12 @@
             <path>
               <item name="CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
               <item name="CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
+              <item name="CrowdFunding" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
               <item name="CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CrowdFunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CrowdFunding" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -380,13 +351,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\ITI40\python\project\CrowdFunding\user\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\ITI40\python\project\CrowdFunding\user\static" />
       <recent name="C:\Users\nora\Desktop\CrowdFunding" />
       <recent name="C:\Users\nora\Desktop\CrowdFunding\CrowdFunding" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ITI40\python\project\CrowdFunding\user\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -479,13 +450,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/userAuth/admin.py" />
     <entry file="file://$PROJECT_DIR$/userAuth/models.py" />
-    <entry file="file://$PROJECT_DIR$/HomePage/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/migrations/0003_profile_userphone.py" />
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -506,13 +470,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HomePage/views.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -560,13 +517,6 @@
             <element signature="e#0#24#0" expanded="true" />
             <marker date="1584914041075" expanded="true" signature="530:535" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -653,19 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1489">
-          <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <marker date="1585067980204" expanded="true" signature="3628:3633" ph="..." />
-            <marker date="1585067980204" expanded="true" signature="4060:4065" ph="..." />
-            <marker date="1585067980204" expanded="true" signature="4501:4503" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CrowdFunding/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1425">
@@ -684,10 +621,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HomePage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2525">
+          <caret line="101" column="32" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <marker date="1585067980204" expanded="true" signature="3628:3633" ph="..." />
+            <marker date="1585067980204" expanded="true" signature="4060:4065" ph="..." />
+            <marker date="1585067980204" expanded="true" signature="4501:4503" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HomePage/templates/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+        <state relative-caret-position="277">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
         </state>
       </provider>
     </entry>
