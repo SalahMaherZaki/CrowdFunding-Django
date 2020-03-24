@@ -2,36 +2,36 @@
 {% load crispy_forms_tags %}
 {% block title %} Edit Profile {% endblock %}
 {% block body %}
-    <div class="container">
+<div class="container">
     <div class="section">
-       <div class="card-panel grey lighten-5 z-depth-1">
-           <div class="row valign-wrapper">
-               <div class="col s2">
-                   <img class="circle responsive-img" style="height: 10rem;" src="{{ user.profile.user_picture.url }}">
-               </div>
-               <div class="col s10">
-                   <h3 class="account-heading">{{ user.username }} | Update</h3>
-                   <p class="text-secondary">{{ user.email }}</p>
-               </div>
-           </div>
+        <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                    <img class="circle responsive-img" style="height: 10rem;" src="{{ user.profile.user_picture.url }}">
+                </div>
+                <div class="col s10">
+                    <h3 class="account-heading">{{ user.username }} | Update</h3>
+                    <p class="text-secondary">{{ user.email }}</p>
+                </div>
+            </div>
         </div>
     </div>
 
-            <form method="POST" enctype="multipart/form-data">
-          {% csrf_token %}
-          <fieldset class="form-group">
-              <legend class="border-bottom mb-4">Profile Info</legend>
-              {{ user_form|crispy }}
-              {{ profile_form|crispy }}
-          </fieldset>
-          <div class="form-group" >
-              <button class="btn-large btn-outline-info" type="submit">Update</button>
-          </div>
-      </form>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Profile Info</legend>
+            {{ user_form|crispy }}
+            {{ profile_form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn-large btn-outline-info" type="submit">Update</button>
+        </div>
+    </form>
 
-<div style="text-align:center;">
-    <a href="/profile/delete/{{ user.id }}"><button class="btn red darken-1">Delete Account?</button></a>
-</div>
-        <br/>
+    <div style="text-align:center;">
+        <a href="/profile/delete/{{ user.id }}"><button class="btn red darken-1">Delete Account?</button></a>
+    </div>
+    <br />
 </div>
 {% endblock %}
