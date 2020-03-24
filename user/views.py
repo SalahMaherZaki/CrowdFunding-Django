@@ -23,17 +23,17 @@ def register(request):
         picture = request.FILES['pic']
         if password1==password2:
             if User.objects.filter(username=username).exists():
-                messages.info(request,'Username is taken')
+                messages.info(request, 'Username is taken')
                 return redirect("register")
             elif User.objects.filter(email=email).exists():
-                messages.info(request,'Email is taken')
+                messages.info(request, 'Email is taken')
                 return redirect("register")
             else:
                 user = User.objects.create_user(first_name=first_name , last_name=last_name ,
                                                 username=username , email=email ,
                                                 password=password1 ,
                                                 )
-                profile = Profile(phoneNum=phone , user_picture=picture.name , user=user )
+                profile = Profile(phoneNum=phone, user_picture=picture, user=user )
                 profile.save()
                 user.save()
                 
