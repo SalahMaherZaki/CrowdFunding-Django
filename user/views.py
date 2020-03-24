@@ -6,6 +6,7 @@ from .models import Profile,UserPhone
 from projects.models import Projects
 from .forms import userUpdateForm, profileUpdateForm, projectUpdateForm
 from django.contrib import messages
+from django.contrib.auth.hashers import check_password
 from django.views.generic import UpdateView
 # Create your views here.
 
@@ -42,6 +43,9 @@ def edit_profile(request):
 @login_required()
 def delete_profile(request,id):
     if request.method == 'POST':
+        # # current_password = request.user.password
+        # password = request.POST['password']
+        # if check_password(password, encoded=HttpResponse):
         account = User.objects.get(id=id)
         account.delete()
         return render(request, 'user/register.html')
